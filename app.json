@@ -1,6 +1,14 @@
 {
   "expo": {
     "name": "CampusTrade",
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app needs access to your photos to allow you to select images."
+        }
+      ]
+    ],
     "slug": "CampusTrade",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,7 +21,9 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+    "infoPlist": {
+      "NSPhotoLibraryUsageDescription": "We need access to your photos to allow image uploads."
+    }
     },
     "android": {
       "adaptiveIcon": {
